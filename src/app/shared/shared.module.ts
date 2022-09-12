@@ -6,6 +6,9 @@ import { TabComponent } from './tab/tab.component';
 import { InputComponent } from './input/input.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { NgxMaskModule } from 'ngx-mask';
+import { AlertComponent } from './alert/alert.component';
+
 // import { ModalService } from '../services/modal.service';
 
 @NgModule({
@@ -14,13 +17,15 @@ import { ReactiveFormsModule } from '@angular/forms';
       TabsContainerComponent,
       TabComponent,
       InputComponent,
+      AlertComponent,
    ],
-   imports: [CommonModule, ReactiveFormsModule],
+   imports: [CommonModule, ReactiveFormsModule, NgxMaskModule.forRoot()],
    exports: [
       ModalComponent,
       TabsContainerComponent,
       TabComponent,
       InputComponent,
+      AlertComponent,
    ],
    // providers es un array de services ( este ( el ModalServices ) es como el context y lo quiero disponible a los q esten en Shared )
    // providers: [ModalService],
