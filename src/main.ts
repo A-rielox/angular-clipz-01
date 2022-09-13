@@ -21,3 +21,14 @@ platformBrowserDynamic()
 // noPropertyAccessFromIndexSignature to false
 //
 // inside the compilerOptions object. This should effectively disable the option.
+
+//
+//
+// const firebaseConfig = {
+//    apiKey: 'AIzaSyCiv0YnZ3KiHjKk7DF2awj2P-xfmwJ7dxc',
+//    authDomain: 'clips-dbe15.firebaseapp.com',
+//    projectId: 'clips-dbe15',
+//    storageBucket: 'clips-dbe15.appspot.com',
+//    messagingSenderId: '1013248488526',
+//    appId: '1:1013248488526:web:ce0a237ed5edfdde93ff1f',
+// };
