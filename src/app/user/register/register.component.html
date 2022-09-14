@@ -6,12 +6,12 @@
    <!-- Name -->
    <div class="mb-3">
       <label class="inline-block mb-2">Name</label>
-
       <app-input
          [control]="registerForm.controls.name"
          placeholder="Enter your name"
       ></app-input>
    </div>
+
    <!-- Email -->
    <div class="mb-3">
       <label class="inline-block mb-2">Email</label>
@@ -21,6 +21,7 @@
          placeholder="Enter Email"
       ></app-input>
    </div>
+
    <!-- Age -->
    <div class="mb-3">
       <label class="inline-block mb-2">Age</label>
@@ -30,6 +31,7 @@
          placeholder="Enter Age"
       ></app-input>
    </div>
+
    <!-- Password -->
    <div class="mb-3">
       <label class="inline-block mb-2">Password</label>
@@ -39,6 +41,7 @@
          placeholder="Password"
       ></app-input>
    </div>
+
    <!-- Confirm Password -->
    <div class="mb-3">
       <label class="inline-block mb-2">Confirm Password</label>
@@ -48,6 +51,7 @@
          placeholder="Confirm Password"
       ></app-input>
    </div>
+
    <!-- Phone Number -->
    <div class="mb-3">
       <label class="inline-block mb-2">Phone Number</label>
@@ -62,7 +66,7 @@
    <button
       type="submit"
       class="block w-full bg-indigo-400 text-white py-1.5 px-3 rounded transition hover:bg-indigo-500 disabled:opacity-50 disabled:bg-indigo-400"
-      [disabled]="registerForm.invalid"
+      [disabled]="registerForm.invalid || inSubmission"
    >
       Submit
    </button>

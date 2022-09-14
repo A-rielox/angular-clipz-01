@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ElementRef } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy, ElementRef } from '@angular/core';
 import { ModalService } from 'src/app/services/modal.service';
 
 @Component({
@@ -19,6 +19,11 @@ export class ModalComponent implements OnInit {
    ngOnInit(): void {
       // MUEVO ESTE COMPONENTE AL BODY
       document.body.appendChild(this.el.nativeElement);
+   }
+
+   // el elemento es destruido por el *ngIf del <app-modal en app.component.html, pero no removido del DOM, para esto
+   ngOnDestroy() {
+      document.body.removeChild(this.el.nativeElement);
    }
 
    closeModal() {
